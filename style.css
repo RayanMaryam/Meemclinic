@@ -152,3 +152,35 @@ h1 { color: #2c3e50; margin-bottom: 30px; font-size: 28px; }
     font-weight: bold;
     font-size: 14px;
 }
+/* تنسيق الإيموجي ليكون كبيراً وواضحاً */
+.img-container .emoji {
+    font-size: 5rem; /* حجم الإيموجي */
+    display: block;
+    line-height: 1;
+}
+
+/* حل مشكلة الصورة المكسورة: إخفاء الصورة تماماً إذا كان الرابط فارغاً */
+.img-container img[src=""], 
+.img-container img:not([src]) {
+    display: none !important;
+}
+
+/* تنسيق أزرار التنقل لتظهر بشكل مرتب */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background-color: #ffb6c1;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}

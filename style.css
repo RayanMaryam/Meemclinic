@@ -122,3 +122,33 @@ h1 { color: #2c3e50; margin-bottom: 30px; font-size: 28px; }
     font-weight: bold;
     box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
 }
+/* تنسيق الإيموجي الافتراضي وحجمه */
+.img-container .emoji {
+    font-size: 4rem; /* حجم الإيموجي الكبير */
+    display: block;
+}
+
+/* إخفاء الصورة إذا كان الرابط فارغاً */
+.img-container img[src=""], 
+.img-container img:not([src]) {
+    display: none;
+}
+
+/* تنسيق أزرار التنقل */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background-color: #ffb6c1;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+}

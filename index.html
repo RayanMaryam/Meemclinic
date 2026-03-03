@@ -3,30 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مكاني الآمن - Meem Clinic</title>
+    <title>Meem Clinic - عيادة ميم</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>ماذا آخذ معي لمكاني الآمن؟ 🏠✨</h1>
-        <div class="nav-container">
-            <a href="calm.html" class="nav-btn">⬅️ رجوع (كيف أهدأ)</a>
-            <a href="index.html" class="nav-btn">الرئيسية (المشاعر) 🏠</a>
+    <div class="welcome-container">
+        <header class="main-header">
+            <div class="emergency-badge">لوحة التواصل الرقمية في حالة الطوارئ 🚨</div>
+            <h1>Meem Clinic - عيادة ميم</h1>
+            <p class="tagline">علاج النطق والتواصل وصعوبات الأكل</p>
+        </header>
+
+        <section class="goal-section">
+            <p><strong>هدف المنصة:</strong> توفير أدوات سهلة لمحادثة بسيطة مع أطفال ذوي احتياجات خاصة في فترة الطوارئ.</p>
+        </section>
+
+        <div class="info-card">
+            <div class="info-item">
+                <i class="fas fa-user-md"></i>
+                <span>الأخصائية: ريان مريم</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>كفرقاسم</span>
+            </div>
         </div>
-    </header>
 
-    <div class="grid-container">
-        <div class="card" onclick="speak('أريد أن آخذ أكلي المفضل')"><span>🍎</span><p>أكلي المفضل</p></div>
-        <div class="card" onclick="speak('أريد أن آخذ لعبتي')"><span>🧸</span><p>لعبتي</p></div>
-        <div class="card" onclick="speak('أريد أن آخذ قصة')"><span>📚</span><p>قصة</p></div>
-        <div class="card" onclick="speak('أريد أن آخذ بطانية')"><span>🧣</span><p>بطانية</p></div>
-        <div class="card" onclick="speak('أريد أن آخذ الآيباد')"><span>📱</span><p>آيباد</p></div>
-        <div class="card" onclick="speak('أريد أن آخذ فقاعات الصابون')"><span>🫧</span><p>فقاعات صابون</p></div>
-        <div class="card" onclick="speak('أريد أن آخذ ألواني')"><span>🎨</span><p>ألوان</p></div>
-        <div class="card" onclick="speak('أريد أن آخذ دبدوبي')"><span>🐻</span><p>دبدوب</p></div>
-        <div class="card" onclick="speak('أريد شيئاً آخر')"><span>❓</span><p>شيء آخر</p></div>
+        <div class="social-links">
+            <p style="margin-bottom: 10px; color: #888; font-size: 14px;">للتواصل والاستفسار عبر الإنستغرام:</p>
+            <a href="https://www.instagram.com/maryamr.slp?igsh=NjB0MGpjMm1vZW5p&utm_source=qr" target="_blank" class="instagram-btn">
+                <i class="fab fa-instagram"></i> maryamr.slp
+            </a>
+        </div>
+
+        <a href="feelings.html" class="start-btn">ابدأ لوحة التواصل الآن 🚀</a>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

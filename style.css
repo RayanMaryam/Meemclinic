@@ -55,3 +55,70 @@ h1 { color: #2c3e50; margin-bottom: 30px; font-size: 28px; }
     color: #444;
     margin: 10px 0 0;
 }
+/* --- تنسيق صفحة البداية الجديدة --- */
+.welcome-container {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 3px solid #ffeff5;
+}
+
+.emergency-badge {
+    background: #ff4d4d;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.tagline {
+    color: #ff69b4;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.goal-section {
+    background: #fdf2f8;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.info-card {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.instagram-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+    padding: 12px;
+    border-radius: 15px;
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.start-btn {
+    display: block;
+    padding: 20px;
+    background: #ff69b4;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+}

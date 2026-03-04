@@ -184,31 +184,28 @@ h1 { color: #2c3e50; margin-bottom: 30px; font-size: 28px; }
     border: none;
     cursor: pointer;
 }
-/* 1. تنسيق الأزرار: السابق يمين والتالي يسار */
+/* 1. تنسيق الأزرار (السابق يمين / التالي يسار) */
 .header-navigation-container {
     display: flex !important;
     flex-direction: row-reverse !important;
     justify-content: center !important;
     gap: 20px !important;
-    margin-bottom: 30px !important;
-    width: 100% !important;
+    margin: 20px auto !important;
 }
 
-/* 2. ضبط الأسهم داخل الأزرار فقط (حجم صغير واتجاه صحيح) */
-.header-navigation-container a img, 
-.header-navigation-container button img {
+/* 2. ضبط الأسهم وحجمها */
+.header-navigation-container img {
     width: 20px !important;
     height: auto !important;
-    transform: scaleX(-1) !important; /* قلب السهم */
-    margin: 0 5px !important;
+    transform: scaleX(-1) !important;
 }
 
-/* 3. إصلاح الصور الكبيرة (مثل الولد الذي يرسم) دون تخريب الدوائر */
-/* هذا الكود يستهدف فقط الصور التي ليست داخل كروت أو دوائر */
+/* 3. تصغير صورة النشاط الكبيرة (الولد اللي بيرسم) */
+/* نستخدم استهدافاً دقيقاً لكي لا نلمس الدوائر */
+.activity-content > img, 
 main > img, 
-.activity-main-image,
-center > img {
-    max-width: 450px !important; /* حجم متناسق للصور الكبيرة */
+#activity-image {
+    max-width: 400px !important;
     width: 100% !important;
     height: auto !important;
     display: block !important;
@@ -216,10 +213,9 @@ center > img {
     border-radius: 20px !important;
 }
 
-/* 4. حماية صور العائلة والأنشطة الدائرية */
-/* هذا السطر يضمن أن الصور داخل الدوائر تبقى كما هي ولا تتأثر بالكود أعلاه */
-.card img, .circle-img, .family-member img {
-    width: 100% !important; 
+/* 4. حماية صور العائلة (الدوائر) لتبقى كما هي */
+.card img, .circle-container img {
+    width: 100% !important;
     max-width: none !important;
     transform: none !important;
 }

@@ -265,3 +265,32 @@ img:not([src]), img[src=""] {
     transition: 0.3s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+/* 1. جعل الأسهم بالاتجاه الصحيح (بدون تغيير حجم الأزرار) */
+.previous-button img, 
+.next-button img,
+[class*="nav"] img {
+    width: 20px !important; /* حجم السهم الصغير */
+    height: auto !important;
+    transform: scaleX(-1) !important; /* قلب السهم فقط */
+    display: inline-block !important;
+    vertical-align: middle;
+}
+
+/* 2. الحفاظ على حجم صور النشاطات (Activities) صغيرة ومنتظمة */
+.activity-card img, 
+.card-image img,
+.activities-container img {
+    width: 120px !important; /* حجم الدائرة كما في التصميم الأصلي */
+    height: 120px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important; /* لجعلها دائرية دائماً */
+    margin-bottom: 10px;
+}
+
+/* 3. ضمان ترتيب الأزرار (السابق يمين / التالي يسار) */
+.header-navigation-container {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}

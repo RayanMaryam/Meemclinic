@@ -294,3 +294,55 @@ img:not([src]), img[src=""] {
     justify-content: space-between !important;
     align-items: center !important;
 }
+/* --- تنسيق شامل للأزرار في كل الصفحات --- */
+
+/* 1. عكس أماكن الأزرار (الحاوية الكبيرة) */
+.header-navigation-container, 
+.nav-buttons, 
+[class*="navigation"] {
+    display: flex !important;
+    flex-direction: row-reverse !important; /* يضع السابق يمين والتالي يسار */
+    justify-content: space-between !important;
+    align-items: center !important;
+    direction: rtl !important;
+    padding: 10px 20px !important;
+}
+
+/* 2. تنسيق زر السابق (اليمين) وسهمه */
+.previous-button, [class*="prev"] {
+    display: flex !important;
+    flex-direction: row-reverse !important; /* يضع السهم يمين النص داخل الزر */
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.previous-button img, [class*="prev"] img {
+    transform: scaleX(-1) !important; /* يقلب السهم ليؤشر لليمين */
+    width: 20px !important; /* حجم السهم الصغير */
+    height: auto !important;
+}
+
+/* 3. تنسيق زر التالي (اليسار) وسهمه */
+.next-button, [class*="next"] {
+    display: flex !important;
+    flex-direction: row !important; /* يضع السهم يسار النص داخل الزر */
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.next-button img, [class*="next"] img {
+    transform: scaleX(-1) !important; /* يقلب السهم ليؤشر لليسار */
+    width: 20px !important;
+    height: auto !important;
+}
+
+/* 4. منع تمدد الصور الكبيرة (لحل مشكلة الصورة التي ظهرت لك) */
+img {
+    max-width: 100%;
+}
+
+.activity-card img, .main-image img {
+    width: 150px !important; /* حجم متوسط ومناسب للصور */
+    height: auto !important;
+    border-radius: 15px !important;
+}

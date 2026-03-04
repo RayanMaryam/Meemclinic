@@ -230,3 +230,11 @@ img:not([src]), img[src=""] {
 .next-button i, .next-button img {
     transform: scaleX(-1); /* يقلب الصورة أفقياً */
 }
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row; /* لضمان الترتيب من اليمين لليسار */
+}
+.previous-button .icon-arrow-left {
+  transform: scaleX(-1); /* يعكس الأيقونة أفقياً */
+}

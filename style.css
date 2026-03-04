@@ -219,4 +219,40 @@ main > img,
     max-width: none !important;
     transform: none !important;
 }
+/* --- الترتيب الجذري الموحد (السابق يمين / التالي يسار) --- */
 
+/* 1. توحيد الحاوية لجميع الأزرار في كل الصفحات */
+.nav-container, 
+.header-navigation-container, 
+header div[class*="nav"] {
+    display: flex !important;
+    flex-direction: row-reverse !important; /* السر: يعكس العناصر برمجياً ليصبح الأول يميناً */
+    justify-content: center !important;    /* تجميع الأزرار في منتصف الصفحة */
+    gap: 30px !important;                 /* مسافة متناسقة بين الزرين */
+    margin: 20px auto !important;
+    width: 100% !important;
+}
+
+/* 2. تنسيق الأزرار (السابق والتالي) لضمان اتجاه الأسهم الصحيح */
+.nav-btn, .previous-button, .next-button {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    /* التأكد من أن النص يظهر بجانب السهم بشكل صحيح */
+    direction: rtl !important; 
+}
+
+/* 3. ضبط الأسهم: سهم السابق لليمين وسهم التالي لليسار */
+.nav-container img, 
+.header-navigation-container img,
+.nav-btn img {
+    width: 22px !important;
+    height: auto !important;
+    /* هذا الأمر يقلب السهم أفقياً ليناسب الاتجاه الجديد */
+    transform: scaleX(-1) !important; 
+}
+
+/* 4. حماية صور الدوائر والأنشطة لتبقى كما هي بدون قلب */
+.card img, .img-container img, .main-activity-img {
+    transform: none !important;
+}

@@ -208,3 +208,16 @@ img:not([src]), img[src=""] {
     object-fit: cover;
     visibility: visible;
 }
+/* تنسيق عكس أزرار التنقل */
+.header-navigation-container { 
+    display: flex !important;
+    flex-direction: row-reverse !important; 
+    justify-content: space-between !important;
+    direction: rtl !important;
+}
+
+/* لضمان المسافات الصحيحة بين الزرين */
+.header-navigation-container > div, 
+.header-navigation-container > button {
+    margin: 0 10px;
+}

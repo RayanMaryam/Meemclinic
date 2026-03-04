@@ -259,18 +259,6 @@ img:not([src]), img[src=""] {
     transform: scaleX(-1) !important; /* يقلب السهم أفقياً */
 }
 
-/* --- 3. تنسيق صور النشاطات الجديدة (Activities) --- */
-/* هذا الكود لضمان ظهور الصور التي سترفعها بشكل متناسق داخل الكروت */
-.activity-card img, 
-.card-image img {
-    width: 100%; /* لتأخذ الصورة كامل عرض الكارت */
-    height: auto;
-    border-radius: 15px; /* لعمل حواف ناعمة مثل تصميمك الحالي */
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 10px auto;
-}
-
 /* --- 4. لمسة جمالية عند تمرير الفأرة على النشاط --- */
 .activity-card:hover {
     transform: translateY(-5px);

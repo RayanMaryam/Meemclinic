@@ -1,34 +1,45 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ماذا أحب أن أفعل؟</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>ماذا أحب أن أفعل في البيت؟</h1>
-        <div class="nav-container">
-            <a href="people.html" class="nav-btn">⬅️ رجوع (الأشخاص)</a>
-            <a href="index.html" class="nav-btn">الرئيسية (المشاعر) 🏠</a>
-        </div>
-    </header>
-
-    <div class="grid-container">
-        <div class="card" onclick="speak('أريد أن ألعب')"><span>🧸</span><p>ألعب</p></div>
-        <div class="card" onclick="speak('أريد أن آكل')"><span>🍎</span><p>آكل</p></div>
-        <div class="card" onclick="speak('أريد أن أنام')"><span>🛌</span><p>أنام</p></div>
-        <div class="card" onclick="speak('أريد مشاهدة التلفاز')"><span>📺</span><p>تلفاز</p></div>
-        <div class="card" onclick="speak('أريد ركوب الدراجة')"><span>🚲</span><p>دراجة</p></div>
-        <div class="card" onclick="speak('أريد أن أرسم')"><span>🎨</span><p>أرسم</p></div>
-        <div class="card" onclick="speak('أريد سماع الموسيقى')"><span>🎵</span><p>موسيقى</p></div>
-        <div class="card" onclick="speak('أريد اللعب بالآيباد')"><span>📱</span><p>آيباد</p></div>
-        <div class="card" onclick="speak('أريد مساعدة ماما بالترتيب')"><span>✨</span><p>أرتب مع ماما</p></div>
-        <div class="card" onclick="speak('أريد أن أرقص')"><span>💃</span><p>أرقص</p></div>
-        <div class="card" onclick="speak('أريد أن أتدرب')"><span>🏃‍♂️</span><p>أتدرب</p></div>
+<div class="header-navigation-container">
+    <div class="next-button">
+        <img src="arrow.png" alt="arrow"> 
+        التالي: ماذا أفعل؟
     </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <div class="previous-button">
+        السابق: مشاعري 
+        <img src="arrow.png" alt="arrow">
+    </div>
+</div>
+
+<h2 class="main-title">ماذا أفعل الآن؟ 🏠</h2>
+
+<div class="activities-grid">
+    <div class="activity-card">
+        <div class="image-box"><img src="draw.webp" alt="رسم"></div>
+        <p>أرسم</p>
+    </div>
+
+    <div class="activity-card">
+        <div class="image-box"><img src="play.avif" alt="لعب"></div>
+        <p>ألعب</p>
+    </div>
+
+    <div class="activity-card">
+        <div class="image-box"><img src="eat.webp" alt="أكل"></div>
+        <p>آكل</p>
+    </div>
+
+    <div class="activity-card">
+        <div class="image-box"><img src="sleep.avif" alt="نوم"></div>
+        <p>أنام</p>
+    </div>
+
+    <div class="activity-card">
+        <div class="image-box"><img src="workout.avif" alt="رياضة"></div>
+        <p>أتدرب</p>
+    </div>
+
+    <div class="activity-card">
+        <div class="image-box"><img src="tv.webp" alt="تلفاز"></div>
+        <p>أشاهد التلفاز</p>
+    </div>
+</div>

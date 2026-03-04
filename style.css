@@ -309,3 +309,37 @@ body > div > img:not([class*="nav"]) {
     width: auto !important; 
     max-width: 80% !important; /* لتبقى كبيرة وواضحة */
 }
+/* عكس أماكن الأزرار في كل الصفحات */
+.header-navigation-container, 
+div[class*="nav"], 
+section[class*="nav"] {
+    display: flex !important;
+    flex-direction: row-reverse !important; /* السابق يمين، التالي يسار */
+    justify-content: space-between !important;
+    direction: rtl !important;
+}
+
+/* عكس اتجاه السهم في زر السابق ليؤشر لليمين */
+[class*="prev"] img, 
+button:contains("السابق") img {
+    transform: scaleX(-1) !important;
+    width: 25px !important; /* حجم السهم */
+    height: auto !important;
+}
+
+/* عكس اتجاه السهم في زر التالي ليؤشر لليسار */
+[class*="next"] img, 
+button:contains("التالي") img {
+    transform: scaleX(-1) !important;
+    width: 25px !important; /* حجم السهم */
+    height: auto !important;
+}
+
+/* حماية صور النشاطات من التمدد (إصلاح مشكلة الحجم الكبير) */
+.main-activity-image, 
+img:not([class*="arrow"]):not([class*="nav"]) {
+    width: auto !important;
+    max-width: 500px !important; /* عرض مناسب لصور الأنشطة */
+    display: block !important;
+    margin: 20px auto !important;
+}

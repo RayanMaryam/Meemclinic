@@ -1,97 +1,186 @@
-/* 1. إعدادات عامة للموقع */
 body {
-    direction: rtl; /* لضمان أن كل شيء يبدأ من اليمين بشكل طبيعي */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff0f5; /* لون وردي فاتح جذاب */
+    text-align: center;
+    padding: 20px;
 }
 
-/* 2. حاوية الأزرار (التنقل العلوي) */
-.header-navigation-container {
-    display: flex !important;
-    flex-direction: row-reverse !important; /* يضع السابق يميناً والتالي يساراً */
-    justify-content: space-between !important;
-    align-items: center !important;
-    padding: 15px 10% !important;
+h1 { color: #2c3e50; margin-bottom: 30px; font-size: 28px; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* عمودين للجوال */
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:active { transform: scale(0.95); }
+
+.img-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #e0e0e0;
+}
+
+.img-container img {
     width: 100%;
-    box-sizing: border-box;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* 3. تنسيق الأزرار (اللون الزهري) */
-.previous-button, .next-button, button, .nav-btn {
-    background-color: #e5979d !important; /* اللون الزهري من تصميمك */
-    color: white !important;
-    border: none !important;
-    border-radius: 25px !important;
-    padding: 8px 20px !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    text-decoration: none !important;
-    font-size: 16px !important;
-    cursor: pointer !important;
+.emoji {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
 }
 
-/* 4. ضبط الأسهم داخل الأزرار */
-/* زر السابق (على اليمين): السهم يجب أن يشير لليمين */
-.previous-button img {
-    transform: scaleX(-1) !important; /* يقلب السهم لليمين */
-    width: 20px !important;
-    height: auto !important;
+.card p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    margin: 10px 0 0;
+}
+/* --- تنسيق صفحة البداية الجديدة --- */
+.welcome-container {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 3px solid #ffeff5;
 }
 
-/* زر التالي (على اليسار): السهم يجب أن يشير لليسار */
-.next-button img {
-    transform: scaleX(1) !important; /* سهم طبيعي يشير لليسار */
-    width: 20px !important;
-    height: auto !important;
+.emergency-badge {
+    background: #ff4d4d;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    display: inline-block;
+    margin-bottom: 15px;
 }
 
-/* 5. تنسيق صور الأنشطة (التي تظهر في مربعات) */
-.activity-card img, .category-card img {
-    width: 120px !important; /* حجم دائري متناسق كما في الصور */
-    height: 120px !important;
-    border-radius: 50% !important; /* دائرة كاملة */
-    object-fit: cover !important;
-    border: 3px solid #e5979d !important; /* إطار زهري خفيف */
-    margin-bottom: 10px !important;
+.tagline {
+    color: #ff69b4;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-/* 6. حماية الصور الكبيرة (مثل صورة الولد الذي يرسم) */
-/* نحدد لها حجماً ثابتاً لكي لا تملأ الشاشة */
-.main-activity-image, .content img:not([class*="arrow"]) {
-    max-width: 500px !important; 
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
-    margin: 20px auto !important;
-    border-radius: 15px !important;
+.goal-section {
+    background: #fdf2f8;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
-/* 7. تنسيق البطاقات (المربعات البيضاء) */
-.card, .activity-item {
-    background: white !important;
-    border-radius: 20px !important;
-    padding: 20px !important;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
-    text-align: center !important;
-}
-/* إصلاح المسافة بين الزرين وجعلهما متقاربين في المنتصف */
-.header-navigation-container, 
-.nav-buttons, 
-[class*="nav"] {
-    display: flex !important;
-    flex-direction: row-reverse !important; /* السابق يمين والتالي يسار */
-    justify-content: center !important;    /* جمع الزرين في المنتصف بدلاً من الأطراف */
-    gap: 20px !important;                 /* التحكم في المسافة بين الزرين (تقدر تزيد أو تنقص الرقم) */
-    margin: 20px 0 !important;
-    direction: rtl !important;
+.info-card {
+    text-align: right;
+    margin-bottom: 25px;
 }
 
-/* التأكد من أن الأسهم صغيرة وبالتجاه الصحيح */
-.header-navigation-container img {
-    width: 20px !important;
-    height: auto !important;
-    transform: scaleX(-1) !important;
+.instagram-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+    padding: 12px;
+    border-radius: 15px;
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.start-btn {
+    display: block;
+    padding: 20px;
+    background: #ff69b4;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+}
+/* تنسيق الإيموجي الافتراضي وحجمه */
+.img-container .emoji {
+    font-size: 4rem; /* حجم الإيموجي الكبير */
+    display: block;
+}
+
+/* إخفاء الصورة إذا كان الرابط فارغاً */
+.img-container img[src=""], 
+.img-container img:not([src]) {
+    display: none;
+}
+
+/* تنسيق أزرار التنقل */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background-color: #ffb6c1;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+}
+/* تنسيق الإيموجي ليكون كبيراً وواضحاً */
+.img-container .emoji {
+    font-size: 5rem; /* حجم الإيموجي */
+    display: block;
+    line-height: 1;
+}
+
+/* حل مشكلة الصورة المكسورة: إخفاء الصورة تماماً إذا كان الرابط فارغاً */
+.img-container img[src=""], 
+.img-container img:not([src]) {
+    display: none !important;
+}
+
+/* تنسيق أزرار التنقل لتظهر بشكل مرتب */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background-color: #ffb6c1;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
 }

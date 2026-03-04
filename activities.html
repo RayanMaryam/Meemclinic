@@ -1,85 +1,66 @@
-<div class="header-navigation-container">
-    <div class="next-button">
-        <img src="arrow.png" alt="arrow"> 
-        التالي: ماذا أفعل؟
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ماذا أفعل الآن؟ - مركز ميم</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* كود الطوارئ لضمان التنسيق في هذه الصفحة فقط */
+        body { font-family: sans-serif; text-align: center; background-color: #f9f9f9; }
+        
+        .header-navigation-container {
+            display: flex !important;
+            flex-direction: row-reverse !important; /* السابق يمين / التالي يسار */
+            justify-content: center !important;
+            gap: 20px !important;
+            margin: 20px auto !important;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            background-color: #ffb6c1; /* اللون الزهري الخاص بمركز ميم */
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-btn img {
+            width: 20px !important;
+            height: auto !important;
+            transform: scaleX(-1) !important; /* قلب السهم */
+            margin: 0 5px;
+        }
+
+        /* تصغير الصورة الكبيرة (الولد اللي بيرسم) */
+        .main-activity-img {
+            max-width: 450px !important;
+            width: 90% !important;
+            height: auto !important;
+            display: block !important;
+            margin: 20px auto !important;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-navigation-container">
+        <a href="feelings.html" class="nav-btn">
+            السابق: مشاعري <img src="arrow.png" alt="arrow">
+        </a>
+        
+        <a href="index.html" class="nav-btn">
+            <img src="arrow.png" alt="arrow"> التالي: البداية
+        </a>
     </div>
 
-    <div class="previous-button">
-        السابق: مشاعري 
-        <img src="arrow.png" alt="arrow">
-    </div>
-</div>
+    <h1>ماذا أفعل الآن؟ 🏠</h1>
 
-<h2 class="main-title">ماذا أفعل الآن؟ 🏠</h2>
+    <img src="draw.webp" alt="طفل يرسم" class="main-activity-img">
 
-<div class="activities-grid">
-    <div class="activity-card">
-        <div class="image-box"><img src="draw.webp" alt="رسم"></div>
-        <p>أرسم</p>
-    </div>
-
-    <div class="activity-card">
-        <div class="image-box"><img src="play.avif" alt="لعب"></div>
-        <p>ألعب</p>
-    </div>
-
-    <div class="activity-card">
-        <div class="image-box"><img src="eat.webp" alt="أكل"></div>
-        <p>آكل</p>
-    </div>
-
-    <div class="activity-card">
-        <div class="image-box"><img src="sleep.avif" alt="نوم"></div>
-        <p>أنام</p>
-    </div>
-
-    <div class="activity-card">
-        <div class="image-box"><img src="workout.avif" alt="رياضة"></div>
-        <p>أتدرب</p>
-    </div>
-
-    <div class="activity-card">
-        <div class="image-box"><img src="tv.webp" alt="تلفاز"></div>
-        <p>أشاهد التلفاز</p>
-    </div>
-</div>
-<style>
-/* 1. إصلاح حجم صورة النشاط الكبيرة (مثل الولد اللي بيرسم) */
-main img, 
-.activity-image, 
-img:not([class*="nav"]) {
-    max-width: 450px !important; /* حجم متناسق وجميل */
-    width: 90% !important;
-    height: auto !important;
-    display: block !important;
-    margin: 20px auto !important;
-    border-radius: 20px !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-/* 2. ترتيب الأزرار (السابق يمين / التالي يسار) وتوسيطها */
-.header-navigation-container {
-    display: flex !important;
-    flex-direction: row-reverse !important; /* يعكس الأماكن */
-    justify-content: center !important;    /* يجمعهم بالوسط */
-    gap: 20px !important; 
-    margin: 20px 0 !important;
-    width: 100% !important;
-}
-
-/* 3. تصغير الأسهم وقلب اتجاهها */
-.header-navigation-container img {
-    width: 20px !important;
-    max-width: 20px !important;
-    transform: scaleX(-1) !important; /* يقلب السهم للجهة الصحيحة */
-    margin: 0 5px !important;
-}
-
-/* 4. حماية الروابط لكي تعمل عند الضغط عليها */
-.header-navigation-container a {
-    text-decoration: none !important;
-    display: flex !important;
-    align-items: center !important;
-    z-index: 999 !important; /* لضمان أنها فوق أي عنصر آخر */
-}
-</style>
+</body>
+</html>

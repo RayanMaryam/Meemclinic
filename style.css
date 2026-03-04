@@ -184,20 +184,31 @@ h1 { color: #2c3e50; margin-bottom: 30px; font-size: 28px; }
     border: none;
     cursor: pointer;
 }
-/* كود محدد لتصغير صور الأنشطة فقط وإعادتها للشكل المتناسق */
+/* --- الكود الجديد والمطور --- */
 
-/* 1. تحديد حجم صور الأنشطة (الولد اللي بيرسم، الأكل، النوم...) */
-/* هذا يضمن بقاء صور الأزرار (الأسهم) والرموز التعبيرية كما هي */
+/* 1. إعادة صور الأنشطة (مثل الولد الذي يرسم) لحجم متناسق ومنتصف الصفحة */
 img:not(.emoji-image):not([src*="arrow"]):not([class*="nav"]) {
-    width: 250px !important;       /* هذا هو الحجم التقريبي للصورة في لقطة الشاشة الأصلية */
+    width: 350px !important;       /* حجم متوسط مثالي لصفحة البداية والأنشطة */
     height: auto !important;
     display: block !important;
-    margin: 0 auto 30px auto !important; /* توسيط الصورة ووضع مسافة تحتها */
+    margin: 20px auto !important;  /* لضمان التوسيط الجميل */
+    border-radius: 15px !important;
 }
 
-/* 2. ضبط صور الأزرار لتبقى صغيرة كما كانت */
-/* إذا تأثرت أسهم الأزرار (السابق/التالي) فاستخدم هذا الجزء */
+/* 2. ترتيب الأزرار: السابق يمين والتالي يسار وتقريبهم من بعض */
+.header-navigation-container {
+    display: flex !important;
+    flex-direction: row-reverse !important; /* عكس الأماكن */
+    justify-content: center !important;    /* تجميعهم في المنتصف */
+    gap: 20px !important;                 /* مسافة بسيطة ومنظمة بينهم */
+    margin: 20px auto !important;
+    width: 100% !important;
+}
+
+/* 3. ضبط اتجاه وحجم الأسهم داخل الأزرار فقط */
 .header-navigation-container img {
-    width: 18px !important;        /* حجم صغير للسهم */
+    width: 18px !important;               /* حجم السهم الصغير الأصلي */
     height: auto !important;
+    transform: scaleX(-1) !important;      /* قلب اتجاه السهم للجهة الصحيحة */
+    margin: 0 5px !important;
 }

@@ -221,3 +221,12 @@ img:not([src]), img[src=""] {
 .header-navigation-container > button {
     margin: 0 10px;
 }
+/* عكس اتجاه السهم في زر السابق ليؤشر لليمين */
+.previous-button i, .previous-button img {
+    transform: scaleX(-1); /* يقلب الصورة أفقياً */
+}
+
+/* عكس اتجاه السهم في زر التالي ليؤشر لليسار */
+.next-button i, .next-button img {
+    transform: scaleX(-1); /* يقلب الصورة أفقياً */
+}

@@ -77,3 +77,21 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
     text-align: center !important;
 }
+/* إصلاح المسافة بين الزرين وجعلهما متقاربين في المنتصف */
+.header-navigation-container, 
+.nav-buttons, 
+[class*="nav"] {
+    display: flex !important;
+    flex-direction: row-reverse !important; /* السابق يمين والتالي يسار */
+    justify-content: center !important;    /* جمع الزرين في المنتصف بدلاً من الأطراف */
+    gap: 20px !important;                 /* التحكم في المسافة بين الزرين (تقدر تزيد أو تنقص الرقم) */
+    margin: 20px 0 !important;
+    direction: rtl !important;
+}
+
+/* التأكد من أن الأسهم صغيرة وبالتجاه الصحيح */
+.header-navigation-container img {
+    width: 20px !important;
+    height: auto !important;
+    transform: scaleX(-1) !important;
+}

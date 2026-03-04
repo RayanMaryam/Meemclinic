@@ -184,3 +184,20 @@ h1 { color: #2c3e50; margin-bottom: 30px; font-size: 28px; }
     border: none;
     cursor: pointer;
 }
+/* كود محدد لتصغير صور الأنشطة فقط وإعادتها للشكل المتناسق */
+
+/* 1. تحديد حجم صور الأنشطة (الولد اللي بيرسم، الأكل، النوم...) */
+/* هذا يضمن بقاء صور الأزرار (الأسهم) والرموز التعبيرية كما هي */
+img:not(.emoji-image):not([src*="arrow"]):not([class*="nav"]) {
+    width: 250px !important;       /* هذا هو الحجم التقريبي للصورة في لقطة الشاشة الأصلية */
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto 30px auto !important; /* توسيط الصورة ووضع مسافة تحتها */
+}
+
+/* 2. ضبط صور الأزرار لتبقى صغيرة كما كانت */
+/* إذا تأثرت أسهم الأزرار (السابق/التالي) فاستخدم هذا الجزء */
+.header-navigation-container img {
+    width: 18px !important;        /* حجم صغير للسهم */
+    height: auto !important;
+}

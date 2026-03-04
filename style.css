@@ -275,4 +275,37 @@ img:not([src]), img[src=""] {
     display: inline-block !important;
     vertical-align: middle;
 }
+/* 1. ترتيب الأزرار: السابق يمين والتالي يسار في كل الموقع */
+.header-navigation-container, 
+[class*="nav-container"], 
+.navigation {
+    display: flex !important;
+    flex-direction: row-reverse !important; /* يعكس أماكن الأزرار */
+    justify-content: space-between !important;
+    direction: rtl !important;
+}
 
+/* 2. ضبط زر "السابق" (سيكون على اليمين وسهمه لليمين) */
+.previous-button img, 
+[class*="prev"] img {
+    transform: scaleX(-1) !important; /* يقلب السهم لليمين */
+    width: 25px !important; /* حجم السهم داخل الزر فقط */
+    height: auto !important;
+}
+
+/* 3. ضبط زر "التالي" (سيكون على اليسار وسهمه لليسار) */
+.next-button img, 
+[class*="next"] img {
+    transform: scaleX(-1) !important; /* يقلب السهم لليسار */
+    width: 25px !important; /* حجم السهم داخل الزر فقط */
+    height: auto !important;
+}
+
+/* 4. حماية صور الأنشطة الكبيرة (Activities) من التغيير */
+/* هذا السطر يمنع الكود من تصغير الصور الكبيرة التي تظهر في وسط الصفحة */
+.main-activity-image, 
+.activity-card img, 
+body > div > img:not([class*="nav"]) {
+    width: auto !important; 
+    max-width: 80% !important; /* لتبقى كبيرة وواضحة */
+}

@@ -43,3 +43,43 @@
         <p>أشاهد التلفاز</p>
     </div>
 </div>
+<style>
+/* 1. إصلاح حجم صورة النشاط الكبيرة (مثل الولد اللي بيرسم) */
+main img, 
+.activity-image, 
+img:not([class*="nav"]) {
+    max-width: 450px !important; /* حجم متناسق وجميل */
+    width: 90% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 20px auto !important;
+    border-radius: 20px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 2. ترتيب الأزرار (السابق يمين / التالي يسار) وتوسيطها */
+.header-navigation-container {
+    display: flex !important;
+    flex-direction: row-reverse !important; /* يعكس الأماكن */
+    justify-content: center !important;    /* يجمعهم بالوسط */
+    gap: 20px !important; 
+    margin: 20px 0 !important;
+    width: 100% !important;
+}
+
+/* 3. تصغير الأسهم وقلب اتجاهها */
+.header-navigation-container img {
+    width: 20px !important;
+    max-width: 20px !important;
+    transform: scaleX(-1) !important; /* يقلب السهم للجهة الصحيحة */
+    margin: 0 5px !important;
+}
+
+/* 4. حماية الروابط لكي تعمل عند الضغط عليها */
+.header-navigation-container a {
+    text-decoration: none !important;
+    display: flex !important;
+    align-items: center !important;
+    z-index: 999 !important; /* لضمان أنها فوق أي عنصر آخر */
+}
+</style>

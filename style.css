@@ -184,31 +184,34 @@ h1 { color: #2c3e50; margin-bottom: 30px; font-size: 28px; }
     border: none;
     cursor: pointer;
 }
-/* --- الكود الجديد والمطور --- */
+/* --- الكود البديل والنهائي لإصلاح الحجم والترتيب --- */
 
-/* 1. إعادة صور الأنشطة (مثل الولد الذي يرسم) لحجم متناسق ومنتصف الصفحة */
-img:not(.emoji-image):not([src*="arrow"]):not([class*="nav"]) {
-    width: 350px !important;       /* حجم متوسط مثالي لصفحة البداية والأنشطة */
+/* 1. السيطرة على الصور الكبيرة في وسط الصفحة فقط */
+main img, 
+.activity-container img, 
+#activity-image {
+    max-width: 400px !important;  /* يمنع أي صورة من تجاوز هذا الحجم */
+    width: 400px !important;      /* يحدد الحجم المرغوب */
     height: auto !important;
     display: block !important;
-    margin: 20px auto !important;  /* لضمان التوسيط الجميل */
-    border-radius: 15px !important;
+    margin: 20px auto !important;
+    border-radius: 20px !important;
 }
 
-/* 2. ترتيب الأزرار: السابق يمين والتالي يسار وتقريبهم من بعض */
+/* 2. ترتيب الأزرار (السابق يمين / التالي يسار) */
 .header-navigation-container {
     display: flex !important;
-    flex-direction: row-reverse !important; /* عكس الأماكن */
-    justify-content: center !important;    /* تجميعهم في المنتصف */
-    gap: 20px !important;                 /* مسافة بسيطة ومنظمة بينهم */
-    margin: 20px auto !important;
+    flex-direction: row-reverse !important; 
+    justify-content: center !important; 
+    gap: 25px !important; 
     width: 100% !important;
+    direction: rtl !important;
 }
 
-/* 3. ضبط اتجاه وحجم الأسهم داخل الأزرار فقط */
+/* 3. منع الأسهم من التكبير وقلب اتجاهها */
 .header-navigation-container img {
-    width: 18px !important;               /* حجم السهم الصغير الأصلي */
-    height: auto !important;
-    transform: scaleX(-1) !important;      /* قلب اتجاه السهم للجهة الصحيحة */
+    max-width: 20px !important;   /* حجم صغير جداً للسهم */
+    width: 20px !important;
+    transform: scaleX(-1) !important;
     margin: 0 5px !important;
 }

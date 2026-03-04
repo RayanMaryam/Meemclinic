@@ -3,49 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مع من أنا في البيت؟</title>
+    <title>من معي بالبيت؟ - Meem Clinic</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>مع من أنا في البيت؟</h1>
-        <a href="index.html" class="nav-btn">⬅️ العودة للمشاعر</a>
+        <h1>من معي بالبيت الآن؟ 🏠</h1>
+        <div class="nav-container">
+            <a href="activities.html" class="nav-btn">⬅️ التالي: ماذا أفعل؟</a>
+            <a href="feelings.html" class="nav-btn">السابق: مشاعري ➡️</a>
+        </div>
     </header>
 
     <div class="grid-container">
         <div class="card" onclick="speak('أنا مع ماما')">
-            <div class="img-container"><img src="https://img.freepik.com/free-vector/hand-drawn-mother-with-her-son_23-2148145244.jpg" alt="ماما"></div>
+            <div class="img-container">
+                <img src="mom.webp" alt="ماما">
+            </div>
             <p>ماما</p>
         </div>
 
         <div class="card" onclick="speak('أنا مع بابا')">
-            <div class="img-container"><img src="https://img.freepik.com/free-vector/hand-drawn-father-with-his-daughter_23-2148151556.jpg" alt="بابا"></div>
+            <div class="img-container">
+                <img src="dad.webp" alt="بابا">
+            </div>
             <p>بابا</p>
         </div>
 
-        <div class="card" onclick="speak('أنا مع أخي أو أختي')">
-            <div class="img-container"><img src="https://img.freepik.com/free-vector/cute-siblings-concept-illustration_114360-14981.jpg" alt="أخواتي"></div>
-            <p>أخ / أخت</p>
+        <div class="card" onclick="speak('أنا مع إخوتي')">
+            <div class="img-container">
+                <img src="brother_sister.jpg" alt="إخوتي">
+            </div>
+            <p>إخوتي</p>
         </div>
 
-        <div class="card" onclick="speak('أنا مع جدي أو جدتي')">
-            <div class="img-container"><img src="https://img.freepik.com/free-vector/happy-grandparents-concept-illustration_114360-8449.jpg" alt="جدو وتيتا"></div>
-            <p>جدو / تيتا</p>
-        </div>
-
-        <div class="card" onclick="speak('أنا مع صديقي')">
-            <div class="img-container"><img src="https://img.freepik.com/free-vector/best-friends-concept-illustration_114360-1554.jpg" alt="صديق"></div>
-            <p>صديق / صديقة</p>
-        </div>
-
-        <div class="card" onclick="speak('أنا مع عائلتي')">
-            <div class="img-container"><img src="https://img.freepik.com/free-vector/happy-family-concept-illustration_114360-1510.jpg" alt="عائلة"></div>
-            <p>عائلة</p>
+        <div class="card" onclick="speak('أنا مع جدي وجدتي')">
+            <div class="img-container">
+                <img src="grandpama.webp" alt="جدي وجدتي">
+            </div>
+            <p>جدي وجدتي</p>
         </div>
 
         <div class="card" onclick="speak('أنا مع حيواني الأليف')">
-            <div class="img-container"><img src="https://img.freepik.com/free-vector/girl-with-dog-concept-illustration_114360-2301.jpg" alt="حيوان"></div>
+            <div class="img-container">
+                <img src="pet.avif" alt="حيواني الأليف">
+            </div>
             <p>حيواني الأليف</p>
+        </div>
+
+        <div class="card" onclick="speak('أنا مع كل العائلة')">
+            <div class="img-container">
+                <img src="family.jpg" alt="العائلة">
+            </div>
+            <p>كل العائلة</p>
         </div>
     </div>
 
